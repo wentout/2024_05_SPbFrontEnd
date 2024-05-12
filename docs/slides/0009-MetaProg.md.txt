@@ -1,0 +1,96 @@
+
+-----
+
+<h1 style={{fontSize:'15vh', color: 'orange'}}>Proxy</h1>
+
+<h1 className="borderline">4</h1>
+
+
+-----
+
+# прокси для конструктора
+
+<div className='codesmall'>
+
+```javascript
+
+
+const MyFn = function () { };
+
+const MyConstructor = new Proxy(MyFn, {
+	get (target, propName, receiver) {
+		// вызов сразу после создания
+		return Reflect.get(target, propName, receiver);
+	},
+	construct (target, args, newTarget) {
+		// вызов оператором new
+		return Reflect.construct(target, args, newTarget);
+	}
+});
+
+const proxyInstance = new MyConstructor;
+
+```
+</div>
+
+<Button onClick={() => { runExample('12_Proxy')}}>Run Me</Button>
+
+-----
+
+# эмуляция Prototype Chain ...
+
+<div className='codesmall'>
+
+```javascript
+const PrototypeChain = [{a:1}, {b:2}, {c:3}];
+const myObject = {};
+const accessorProxy = new Proxy(myObject, {
+	get (target, prop, receiver) {
+		let result;
+		PrototypeChain.reverse().forEach(current => {
+			if (result === undefined) {
+				result = Reflect.get(current, prop);
+			}
+		});
+		return result;
+	}
+});
+Reflect.setPrototypeOf(myObject, accessorProxy);
+
+```
+</div>
+
+<Button onClick={() => { runExample('12_ProtoEmulation')}}>Run Me</Button>
+
+
+-----
+
+# замена Prototype Chain ...
+
+<div className='codesmall'>
+
+```javascript
+const PrototypeChain = [{a:1}, {b:2}, {c:3}];
+const MyConstructor = function () {};
+const accessorProxy = new Proxy(MyConstructor.prototype, {
+	get (target, prop, receiver) {
+		let result;
+		PrototypeChain.reverse().forEach(current => {
+			if (result === undefined) {
+				result = Reflect.get(current, prop);
+			}
+		});
+		return result;
+	}
+});
+Reflect.setPrototypeOf(MyConstructor.prototype, accessorProxy);
+const myObject = new MyConstructor;
+
+```
+</div>
+
+<Button onClick={() => { runExample('12_ProtoReplacement')}}>Run Me</Button>
+
+
+-----
+

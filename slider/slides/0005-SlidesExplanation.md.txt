@@ -1,0 +1,235 @@
+
+-----
+
+<h1 style={{fontSize:'15vh', color: 'orange'}}>... intro ...</h1>
+
+<h1 className="borderline">0</h1>
+
+
+-----
+
+<Box sx={{marginTop: '25vh'}}>
+<center>
+<h1 style={{fontSize: '7vh', color: 'green'}}>если вы смотрите на код</h1>
+</center>
+</Box>
+
+-----
+
+<Box sx={{marginTop: '25vh'}}>
+<center>
+<h1 style={{fontSize: '7vh', color: 'green'}}>если вы смотрите на код</h1>
+<h1 style={{fontSize: '8vh', color: 'orange'}}>очень долгое время</h1>
+</center>
+</Box>
+
+-----
+
+<Box sx={{marginTop: '25vh'}}>
+<center>
+	<h1 style={{fontSize: '7vh', color: 'green'}}>если вы смотрите на код</h1>
+	<h1 style={{fontSize: '8vh', color: 'orange'}}>очень долгое время</h1>
+	<h1 style={{fontSize: '9vh'}}>код начинает смотреть на вас</h1>
+</center>
+</Box>
+
+-----
+
+
+# так выглядит код этой презентации
+
+<Chart id='chart' opts={{
+	chart : {
+		type : 'tree',
+		dy : 18,
+		dx : 50,
+		width : 320,
+		margin : {
+			top: 25,
+			bottom: 10,
+			right: 20,
+			left: 70
+		},
+	}
+}} />
+
+-----
+
+
+
+# вот прям так он определён
+
+<div className='codemedium'>
+
+```javascript
+
+import { Slide, MDX 
+  /*...*/ } from './components';
+
+const Runner = define(Main);
+
+const SlideRoot = Runner.define( Slide );
+
+const SlideMDX = SlideRoot.define( MDX );
+SlideMDX.define(Progressor);
+SlideMDX.define(Footer);
+
+// ... Starter, Title
+```
+</div>
+
+-----
+
+# и поэтому есть жизненный цикл : Time Line
+
+<div className="timelineText2">
+
+# &mdash; &mdash; <span style={{color:'orange'}}>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span style={{color:'orange'}}>Line</span> &mdash; &mdash; <span style={{color:'orange'}}>&gt;</span>
+
+</div>
+
+<div className="timelineTextBlack2">
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+</div>
+
+<Chart id='chartAbs2' opts={{
+	chart : {
+		type : 'tree',
+		dy : 20,
+		dx : 59,
+		width : 320,
+		margin : {
+			top: 30,
+			bottom: 10,
+			right: 20,
+			left: 50
+		},
+	}
+}} />
+
+-----
+
+
+# то есть код и есть его определение 
+
+<div className='codemedium'>
+```javascript
+
+import { Slide, MDX 
+  /*...*/ } from './components';
+
+const Runner = define(Main);
+
+const SlideRoot = Runner.define( Slide );
+
+const SlideMDX = SlideRoot.define( MDX );
+SlideMDX.define(Progressor);
+SlideMDX.define(Footer);
+
+// ... Starter, Title
+```
+</div>
+-----
+
+# всё собирается <span style={{color:'orange'}}>из самого слайда</span>
+
+<div className='codemedium'>
+
+```javascript
+app.collectTypes = function () {
+	return [...this.subtypes]
+	.reduce((acc, [name, type]) => {
+		acc.push({
+			name,
+			children: this
+				.collectTypes(type);
+		});
+		return acc;
+	});
+};
+```
+</div>
+
+-----
+
+# и поэтому можно собрать это в диаграмму
+
+<div className="timelineText2">
+
+# &mdash; &mdash; <span style={{color:'orange'}}>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span style={{color:'orange'}}>Line</span> &mdash; &mdash; <span style={{color:'orange'}}>&gt;</span>
+
+</div>
+
+<div className="timelineTextBlack2">
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+# &mdash; &mdash; <span>Time</span> &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; <span style={{color:'green'}}>|</span> &mdash; &mdash; &mdash; &mdash; &mdash;  <span>Line</span> &mdash; &mdash; <span>&gt;</span>
+
+</div>
+
+
+
+<Chart id='chartAbs2' opts={{
+	chart : {
+		type : 'tree',
+		dy : 20,
+		dx : 59,
+		width : 320,
+		margin : {
+			top: 30,
+			bottom: 10,
+			right: 20,
+			left: 50
+		},
+	}
+}} />
+
+-----
+
+
+

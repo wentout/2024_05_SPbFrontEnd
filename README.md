@@ -1,2 +1,1 @@
-# 2024_05_SPbFrontEnd
-SPb Front-End talk
+# 2024_05 SPb Front-End slides

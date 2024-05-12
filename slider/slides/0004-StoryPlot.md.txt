@@ -1,0 +1,86 @@
+
+
+# мне просто нравятся эти два слайда
+
+<Box>
+<center>
+<img src="./content/img/poly_struct.svg"  style={{width: '70vw'}} />
+</center>
+</Box>
+
+
+-----
+
+# мне просто нравятся эти два слайда
+
+<Box>
+<center>
+<img src="./content/img/poly_red.svg"  style={{width: '70vw'}} />
+</center>
+</Box>
+
+
+-----
+
+-----
+
+<Box sx={{marginTop: '35vh'}}>
+<center>
+<h1 style={{fontSize: '11vh', color: 'cyan'}}>... with ...</h1>
+</center>
+</Box>
+
+<h1 className="borderline">-1</h1>
+
+-----
+
+-----
+
+# IMO &mdash; это исходное назначение JavaScript
+
+```javascript
+
+// this code will fail in strict mode
+// so let just copy it to the console
+
+with ( [ 2, 5 ] ) {
+	console.log(
+		Math.pow(
+			... reverse ()
+		)
+	);		// 25
+}
+
+
+```
+
+-----
+
+# IMO &mdash; это исходное назначение JavaScript
+
+
+```javascript
+// this code will fail in strict mode
+// so let just copy it to the console
+
+with ( 0 ) {
+	console.log(
+		Math.pow(
+			valueOf(), valueOf()
+		)
+	);		// 1
+}
+
+```
+
+-----
+
+# MDN statement : with
+
+<Box sx={{textAlign: 'center'}}>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with">
+<img src="./content/img/withMDN.png" style={{marginTop: '2vh', width: '75vw'}} />
+</a>
+</Box>
+
+

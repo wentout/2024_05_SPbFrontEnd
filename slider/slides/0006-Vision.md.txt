@@ -1,0 +1,173 @@
+
+
+-----
+
+<h1 style={{fontSize:'15vh', color: 'orange'}}>Vision</h1>
+
+<h1 className="borderline">1</h1>
+
+
+
+-----
+
+## JavaScript всё ещё про with ...
+
+```javascript
+// this code will fail in strict mode ...
+// so let just copy it to the console
+
+with ( Object ) {
+	console.log(
+		getPrototypeOf(
+			create( null )
+		)
+	);		// null
+}
+
+```
+
+-----
+
+# Сейчас есть Class
+
+```javascript className=codehugeshift
+
+class TheClass {};
+
+debugger;
+
+const instance = new TheClass;
+
+debugger;
+
+```
+
+<Button onClick={() => { runExample('02_01_SimpleClass')}}>Run Me</Button>
+
+-----
+
+# Extended Class
+
+```javascript className=codehugeshift
+
+class BaseClass {};
+
+class TheClass extends BaseClass{};
+
+debugger;
+
+const instance = new TheClass;
+
+debugger;
+
+```
+
+<Button onClick={() => { runExample('02_02_ExtendedClass')}}>Run Me</Button>
+
+-----
+
+# но начиналось это так
+
+```javascript className=codehugeshift
+// back to the 1997 spec release
+var TheConstructor = function () {
+	this;
+	debugger;
+};
+
+var instance = new TheConstructor;
+// we can see constructor definition
+// made like this
+```
+
+<Button onClick={() => { runExample('01_1995')}}>Run Me</Button>
+
+-----
+
+# и это не сработало
+
+<Box>
+<center>
+<img src="./content/img/CrockMisunderstood.png"  style={{width: '70vw'}} />
+</center>
+</Box>
+
+-----
+
+# потому, что с первой спеки вот это
+
+<Box>
+<center>
+<a href="http://ecma-international.org/ecma-262/#sec-objects">
+<img src="./content/img/figure-1.svg"  style={{width: '70vw'}} />
+</a>
+</center>
+</Box>
+
+CF is a constructor (and also an object). Five objects have been created by using new expressions: cf1, cf2, cf3, cf4, and cf5. Each of these objects contains properties named "q1" and "q2". The dashed lines represent the implicit prototype relationship; so, for example, cf3's prototype is CFp. The constructor, CF, has two properties itself, named "P1" and "P2", which are not visible to CFp, cf1, cf2, cf3, cf4, or cf5. The property named "CFP1" in CFp is shared by cf1, cf2, cf3, cf4, and cf5 (but not by CF), as are any properties found in CFp's implicit prototype chain that are not named "q1", "q2", or "CFP1". Notice that there is no implicit prototype link between CF and CFp.
+
+Unlike most class-based object languages, properties can be added to objects dynamically by assigning values to them. That is, constructors are not required to name or assign values to all or any of the constructed object's properties. In the above diagram, one could add a new shared property for cf1, cf2, cf3, cf4, and cf5 by assigning a new value to the property in CFp.
+
+-----
+
+# возможно именно поэтому старина Крок против
+
+<Box>
+<center>
+<img src="./content/img/CrockPrototypes.png"  style={{width: '70vw'}} />
+</center>
+</Box>
+
+-----
+
+# нарисуем нормально
+
+<Box>
+<center>
+<img src="./content/img/JS_Object_Topology.svg"  style={{width: '70vw'}} />
+</center>
+</Box>
+
+-----
+
+<Box sx={{marginTop: '25vh', marginLeft: '15vw', fontFamily: 'Courier', fontSize:'3vh'}}>
+	Let us remember, it was: December 4, 1995<br/>
+	<br/>
+	The More Developed languages had Class Based Ineritance<br/>
+	But prototypes are way more simplier pattern.<br/>
+	Just put something to the Constructors.prototype.<br/>
+	And that is it -- it would be inherited.<br/>
+	<br/>
+		-- What for?
+</Box>
+
+-----
+[{"snowflakes":true}]
+
+<Box sx={{marginTop: '25vh', marginLeft: '15vw', fontFamily: 'Courier', fontSize:'3vh'}}>
+	Let us remember, it was: December 4, 1995<br/>
+	<br/>
+	The More Developed languages had Class Based Ineritance<br/>
+	But prototypes are way more simplier pattern.<br/>
+	Just put something to the Constructors.prototype.<br/>
+	And that is it -- it would be inherited.<br/>
+	<br/>
+		-- What for? Snowflakes, for sure!<br/>
+</Box>
+
+
+-----
+
+# Насколько глубока Кроличья Нора ?
+
+<Box>
+<center>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">
+<img src="./content/img/PrototypeChain.png"  style={{width: '70vw'}} />
+</a>
+</center>
+</Box>
+
+<Button onClick={() => { runExample('PrototypeChainDeepnessTest')}}>Run Me</Button>
+
+-----
