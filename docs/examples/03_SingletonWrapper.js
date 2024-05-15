@@ -1,7 +1,7 @@
 
 const SingletonWrapper = function () { };
 
-SingletonWrapper.prototype = Object.create($);
+SingletonWrapper.prototype = Object.create(window.$);
 
 SingletonWrapper.prototype.constructor = SingletonWrapper;
 
