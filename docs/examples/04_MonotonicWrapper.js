@@ -33,8 +33,7 @@ debugger;
 console.log(
 
 	Object.getPrototypeOf // !!!
-
-		(instance1.someValue)
+		(instance1).someValue
 );
 
 debugger;

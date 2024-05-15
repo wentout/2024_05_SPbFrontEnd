@@ -70,7 +70,7 @@ class ForExtending extends ExtendedFn {
 		console.log(' ↓ this.forExtendingProto : ', this.forExtendingProto);
 		console.log(' ↓ this.inTheMiddleProto  : ', this.inTheMiddleProto);
 		console.log(' ↓ this.someProto         : ', this.someProto);
-		this.super = 2;
+		this.super = 3;
 		this.forExtending = true;
 	}
 };
@@ -118,5 +118,7 @@ console.log('ForExtending → InTheMiddle', Reflect.getPrototypeOf(InTheMiddle) 
 console.log('ForExtending → InTheMiddle', Reflect.getPrototypeOf(InTheMiddle.prototype) === ForExtending.prototype); // true
 console.log('InTheMiddle → Some', Reflect.getPrototypeOf(Some) === InTheMiddle); // true
 console.log('InTheMiddle → Some', Reflect.getPrototypeOf(Some.prototype) === InTheMiddle.prototype); // true
+
+console.log('some instanceof Base', some instanceof Base);
 
 debugger;
