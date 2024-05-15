@@ -1,5 +1,5 @@
 import $ from "jquery";
-
+window.$ = $;
 window.runExample = async function (path) {
 	const fetched = await fetch(`../2024_05_SPbFrontEnd/examples/${path}.js`, {
 		headers: {
