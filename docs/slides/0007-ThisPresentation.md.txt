@@ -1,73 +1,56 @@
 
+-----
+
+<h1 style={{fontSize:'21vh', color: 'orange'}}>C.Ø.D.E</h1>
+
+<h1 className="borderline">2</h1>
 
 -----
 
-<h1 style={{fontSize:'15vh', color: 'orange'}}>Vision</h1>
+# так выглядит код этой презентации
 
-<h1 className="borderline">1</h1>
+<Chart id='chart' opts={{
+	chart : {
+		type : 'tree',
+		dy : 18,
+		dx : 50,
+		width : 320,
+		margin : {
+			top: 25,
+			bottom: 10,
+			right: 20,
+			left: 70
+		},
+	}
+}} />
+
 
 -----
 
-# Сейчас есть Class
+# вот прям так он определён
 
-```javascript className=codehugeshift
-
-class TheClass {};
-
-debugger;
-
-const instance = new TheClass;
-
-debugger;
-
-```
-
-<Button onClick={() => { runExample('02_01_SimpleClass')}}>Run Me</Button>
-
------
-
-# Extended Class
-
-```javascript className=codehugeshift
-
-class BaseClass {};
-
-class TheClass extends BaseClass{};
-
-debugger;
-
-const instance = new TheClass;
-
-debugger;
-
-```
-
-<Button onClick={() => { runExample('02_02_ExtendedClass')}}>Run Me</Button>
-
------
-
-
-## но JavaScript всё ещё про with ...
+<div className='codemedium'>
 
 ```javascript
-// this code will fail in strict mode ...
-// so let just copy it to the console
 
-with ( Object ) {
-	console.log(
-		getPrototypeOf(
-			create( null )
-		)
-	);		// null
-}
+import { Slide, MDX 
+  /*...*/ } from './components';
 
+const Runner = define(Main);
+
+const SlideRoot = Runner.define( Slide );
+
+const SlideMDX = SlideRoot.define( MDX );
+SlideMDX.define(Progressor);
+SlideMDX.define(Footer);
+
+// ... Starter, Title
 ```
-
+</div>
 
 -----
 
-# а мы в погоне за удобством теряем ...
-
+# и поэтому есть жизненный цикл : Time Line
 
 <div className="timelineText2">
 
@@ -121,62 +104,109 @@ with ( Object ) {
 -----
 
 
+# и создано оно при помощи такого кода 
+
+```javascript className=codehugeshift
+
+const SingletonWrapper = function () { };
+
+SingletonWrapper.prototype =
+		Object.create( jQuery ); // ← !
+
+SingletonWrapper.prototype
+	.constructor = SingletonWrapper;
+
+const instance = new SingletonWrapper;
+
+```
+
+<Button onClick={() => { runExample('03_SingletonWrapper')}}>Run Me</Button>
+
+
+-----
+
+# и на самом деле можно: Numbers → Array → Object
+
+<Box sx={{marginLeft:'10vw', marginTop:'10vh'}}>
+
+* # Array, Number, Object
+* # унаследовать одно от другого
+* # проверить instanceof
+* # показать valueOf
+* # и там ещё есть кое что ...
+
+</Box>
+
+<Button onClick={() => { runExample('NumbersIncrementalComputation')}}>Run Me</Button>
+
+
+
+-----
+
+# и ещё там есть замена Prototype Chain ...
+
+<div className='codesmall'>
+
+```javascript
+const PrototypeChain = [{a:1}, {b:2}, {c:3}];
+const MyConstructor = function () {};
+const accessorProxy = new Proxy(MyConstructor.prototype, {
+	get (target, prop, receiver) {
+		let result;
+		PrototypeChain.reverse().forEach(current => {
+			if (result === undefined) {
+				result = Reflect.get(current, prop);
+			}
+		});
+		return result;
+	}
+});
+Reflect.setPrototypeOf(MyConstructor.prototype, accessorProxy);
+const myObject = new MyConstructor;
+
+```
+</div>
+
+<Button onClick={() => { runExample('12_ProtoReplacement')}}>Run Me</Button>
+
+
+
+ 
 -----
 
 <Box sx={{marginTop: '35vh'}}>
 <center>
-<h1 style={{fontSize: '12vh', color: 'cyan'}}> почему ? </h1>
+<h1 style={{fontSize: '12vh', color: 'gray'}}> ... </h1>
 </center>
 </Box>
 
 -----
 
-# почему ?
-
-
-<Box sx={{marginTop: '15vh'}}>
+<Box sx={{marginTop: '35vh'}}>
 <center>
-<h1 style={{fontSize: '9vh', color: 'gray'}}> потмоу, что ... </h1>
+<h1 style={{fontSize: '12vh', color: 'cyan'}}> всё это чтобы ... </h1>
 </center>
 </Box>
 
+
 -----
+[{"errorMode":1}]
 
-# почему ?
+<h2>
+ выберем нужный контекст из миллиона
+ 
+ 
+ -----
 
-
-<Box sx={{marginTop: '15vh'}}>
+<Box sx={{marginTop: '35vh'}}>
 <center>
-<h1 style={{fontSize: '9vh', color: 'gray'}}> потмоу, что super () </h1>
+<h1 style={{fontSize: '9vh', color: 'cyan'}}> хотя ... </h1>
 </center>
 </Box>
 
------
-
-# почему ?
-
-
-<Box sx={{marginTop: '15vh'}}>
-<center>
-<h1 style={{fontSize: '9vh', color: 'gray'}}> потмоу, что super () </h1>
-<h1 style={{fontSize: '9vh', color: 'cyan'}}> всего лишь .call ... </h1>
-</center>
-</Box>
 
 -----
+[{"errorMode":2}]
 
-# потому, что super() это всего лишь .call ...
-
------
-
-# потому, что super() это всего лишь .call ...
-
-<Box sx={{marginLeft:'10vw', marginTop:'10vh'}}>
-
-* # определить class extends
-* # определить function как extends
-* # перемешать и посмотреть результат
-
-</Box>
-
-<Button onClick={() => { runExample('Class2Function')}}>Run Me</Button>
+<h2>
+ выберем нужный контекст из миллиона

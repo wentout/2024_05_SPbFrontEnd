@@ -18,6 +18,7 @@ debugger;
 
 MonotonicWrapper.prototype.anotherValue = 321;
 
+console.log('check assitnment');
 console.log(instance1.someValue);
 console.log(instance2.someValue);
 
@@ -25,11 +26,13 @@ debugger;
 
 instance1.someValue = 321;
 
+console.log('check RE-assitnment');
 console.log(instance1.someValue);
 console.log(instance2.someValue);
 
 debugger;
 
+console.log('check initial value');
 console.log(
 
 	Object.getPrototypeOf // !!!
@@ -38,6 +41,7 @@ console.log(
 
 debugger;
 
+console.log('check monotonous field added');
 console.log(instance1.anotherValue);
 console.log(instance2.anotherValue);
 

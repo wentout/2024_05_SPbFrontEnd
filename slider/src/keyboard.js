@@ -38,8 +38,8 @@ export default function () {
 		unsetErrored();
 	});
 
-	// window.document.onclick = function () {
-	// 	app.clickNext();
-	// };
+	window.document.onclick = function () {
+		app.clickNext();
+	};
 
 }

@@ -15,7 +15,12 @@ const errorHandler = [
 			instance
 		} = error;
 		// console.error(originalError);
-		instance.showRootError(`<pre>${ originalError.stack }</pre>`);
+		debugger;
+		const { message } = originalError;
+		instance.showRootError(`<pre>${ message
+				.replace(/</g, ' < ')
+				.replace(/>/g, ' > ;')
+		}</pre>`);
 	},
 
 	(error) => {

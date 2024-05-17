@@ -1,6 +1,66 @@
 
+# сегодня проснулся утром
 
-# мне просто нравятся эти два слайда
+<Box sx={{marginTop: '5vh'}}>
+<center>
+<h1 style={{fontSize: '11vh', color: 'cyan'}}>... и понял  ...</h1>
+</center>
+</Box>
+
+-----
+
+# сегодня проснулся утром
+
+<Box sx={{marginTop: '5vh'}}>
+<center>
+<h1 style={{fontSize: '11vh', color: 'cyan'}}>... и понял  ...</h1>
+<h1 style={{fontSize: '9vh', color: 'cyan'}}>что нужно всё  переделать</h1>
+</center>
+</Box>
+
+-----
+
+# сегодня проснулся утром
+
+<Box sx={{marginTop: '5vh'}}>
+<center>
+<h1 style={{fontSize: '11vh', color: 'cyan'}}>... и понял  ...</h1>
+</center>
+</Box>
+
+<img src="./content/img/girl_burns.jpeg" style={{position: 'absolute', top: '42vh', left:'27vw', zIndex: 100, width: '45vw'}} />
+
+-----
+
+
+# благо, что код презентации это MD файлы
+
+<img src="./content/img/slides_files.png" style={{position: 'absolute', top: '15vh', left:'9vw', zIndex: 100, width: '85vw'}} />
+
+-----
+
+# когда проснулся утром
+
+<Box sx={{marginTop: '5vh'}}>
+<center>
+<h1 style={{fontSize: '5vh', color: 'cyan'}}>... и, в общем, да ...</h1>
+<h1 style={{fontSize: '5vh', color: 'cyan'}}> нужно всё переделать </h1>
+</center>
+</Box>
+
+<img src="./content/img/girl_burns.jpeg" style={{position: 'absolute', top: '42vh', left:'27vw', zIndex: 100, width: '45vw'}} />
+
+-----
+
+<Box sx={{marginTop: '35vh'}}>
+<center>
+<h1 style={{fontSize: '15vh', color: 'cyan'}}> почему ? </h1>
+</center>
+</Box>
+
+-----
+
+# просто мне нравятся эти два слайда
 
 <Box>
 <center>
@@ -32,7 +92,42 @@
 
 <h1 className="borderline">-1</h1>
 
+
 -----
+# вопросы аудитории : 
+
+<Box sx={{marginTop: '7vh'}}>
+<center>
+	<h1 style={{fontSize: '7vh', color: 'green'}}>Как много тут Front-End'еров ?</h1>
+</center>
+</Box>
+
+-----
+# вопросы аудитории : 
+
+<Box sx={{marginTop: '7vh'}}>
+<center>
+	<h1 style={{fontSize: '7vh', color: 'green'}}>Как много тут Front-End'еров ?</h1>
+	<h1 style={{fontSize: '8vh', color: 'orange'}}>Сколько из вас пишет на React ?</h1>
+</center>
+</Box>
+
+-----
+# вопросы аудитории : 
+
+<Box sx={{marginTop: '7vh'}}>
+<center>
+	<h1 style={{fontSize: '7vh', color: 'green'}}>Как много тут Front-End'еров ?</h1>
+	<h1 style={{fontSize: '8vh', color: 'orange'}}>Сколько из вас пишет на React ?</h1>
+	<h1 style={{fontSize: '9vh', color: 'cyan'}}>А кто считает, что пишет <br/>на JavaScript ?</h1>
+</center>
+</Box>
+
+-----
+
+# И как часто вы думаете, что нужно всё переделать ?
+
+<img src="./content/img/Yes-You-Can.jpg" style={{position: 'absolute', top: '22vh', left:'16vw', zIndex: 100, width: '71vw'}} />
 
 -----
 
@@ -56,8 +151,7 @@ with ( [ 2, 5 ] ) {
 
 -----
 
-# IMO &mdash; это исходное назначение JavaScript
-
+# работа с объектами и примитивами
 
 ```javascript
 // this code will fail in strict mode
@@ -84,3 +178,154 @@ with ( 0 ) {
 </Box>
 
 
+-----
+
+# объекты начинаются с конструкторов 
+
+```javascript className=codehugeshift
+// back to the 1997 spec release
+var TheConstructor = function () {
+	this;
+	debugger;
+};
+
+var instance = new TheConstructor;
+// we can see constructor definition
+// made like this
+```
+
+<Button onClick={() => { runExample('01_1995')}}>Run Me</Button>
+
+-----
+
+# но это всё не сработало
+
+<Box>
+<center>
+<img src="./content/img/CrockMisunderstood.png"  style={{width: '70vw'}} />
+</center>
+</Box>
+
+-----
+
+# потому, что с первой спеки вот это
+
+<Box>
+<center>
+<a href="http://ecma-international.org/ecma-262/#sec-objects">
+<img src="./content/img/figure-1.svg"  style={{width: '70vw'}} />
+</a>
+</center>
+</Box>
+
+CF is a constructor (and also an object). Five objects have been created by using new expressions: cf1, cf2, cf3, cf4, and cf5. Each of these objects contains properties named "q1" and "q2". The dashed lines represent the implicit prototype relationship; so, for example, cf3's prototype is CFp. The constructor, CF, has two properties itself, named "P1" and "P2", which are not visible to CFp, cf1, cf2, cf3, cf4, or cf5. The property named "CFP1" in CFp is shared by cf1, cf2, cf3, cf4, and cf5 (but not by CF), as are any properties found in CFp's implicit prototype chain that are not named "q1", "q2", or "CFP1". Notice that there is no implicit prototype link between CF and CFp.
+
+Unlike most class-based object languages, properties can be added to objects dynamically by assigning values to them. That is, constructors are not required to name or assign values to all or any of the constructed object's properties. In the above diagram, one could add a new shared property for cf1, cf2, cf3, cf4, and cf5 by assigning a new value to the property in CFp.
+
+-----
+
+# возможно именно поэтому старина Крок против
+
+<Box>
+<center>
+<img src="./content/img/CrockPrototypes.png"  style={{width: '70vw'}} />
+</center>
+</Box>
+
+-----
+
+# нарисуем нормально
+
+<Box>
+<center>
+<img src="./content/img/JS_Object_Topology.svg"  style={{width: '70vw'}} />
+</center>
+</Box>
+
+
+-----
+
+
+# ещё там было: Singleton Wrapper
+
+```javascript className=codehugeshift
+
+const SingletonWrapper = function () { };
+
+SingletonWrapper.prototype =
+		Object.create( jQuery ); // ← !
+
+SingletonWrapper.prototype
+	.constructor = SingletonWrapper;
+
+const instance = new SingletonWrapper;
+
+```
+
+<Button onClick={() => { runExample('03_SingletonWrapper')}}>Run Me</Button>
+
+
+-----
+
+# ещё там было: Monotonic Wrapper
+
+```javascript className=codehugeshift
+
+const MonotonicWrapper = function () { };
+
+MonotonicWrapper.prototype.someValue = 123;
+
+class MyClass extends MonotonicWrapper { };
+
+// reference MonotonicWrapper.prototype
+const instance1 = new MyClass;
+const instance2 = new MyClass;
+
+```
+
+<Button onClick={() => { runExample('04_MonotonicWrapper')}}>Run Me</Button>
+
+
+-----
+
+# Насколько глубока Кроличья Нора ?
+
+<Box>
+<center>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">
+<img src="./content/img/PrototypeChain.png"  style={{width: '70vw'}} />
+</a>
+</center>
+</Box>
+
+<Button onClick={() => { runExample('PrototypeChainDeepnessTest')}}>Run Me</Button>
+
+-----
+
+<Box sx={{marginTop: '25vh', marginLeft: '15vw', fontFamily: 'Courier', fontSize:'3vh'}}>
+	Let us remember, it was: December 4, 1995<br/>
+	<br/>
+	The More Developed languages had Class Based Ineritance<br/>
+	But prototypes are way more simplier pattern.<br/>
+	Just put something to the Constructors.prototype.<br/>
+	And that is it -- it would be inherited.<br/>
+	<br/>
+		-- What for?
+</Box>
+
+-----
+[{"snowflakes":true}]
+
+<Box sx={{marginTop: '25vh', marginLeft: '15vw', fontFamily: 'Courier', fontSize:'3vh'}}>
+	Let us remember, it was: December 4, 1995<br/>
+	<br/>
+	The More Developed languages had Class Based Ineritance<br/>
+	But prototypes are way more simplier pattern.<br/>
+	Just put something to the Constructors.prototype.<br/>
+	And that is it -- it would be inherited.<br/>
+	<br/>
+		-- What for? Snowflakes, for sure!<br/>
+</Box>
+
+
+-----

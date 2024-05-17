@@ -16,6 +16,15 @@
 
 	const review = () => {
 		console.log('finished', global.m.length, (Date.now() - global.start) / 1000);
+		
+		debugger;
+		
+		console.time("time");
+		
+		console.log('global.current:', global.current.idx_0);
+		
+		console.timeEnd("time");
+		
 		debugger;
 	};
 
@@ -36,6 +45,8 @@
 		global.m.push(el);
 		if (global.m.length < MAX_NUM) {
 			console.log(global.m.length, name, (Date.now() - global.start) / 1000);
+			
+			// get rid of stack overflow
 			requestAnimationFrame(() => {
 				makeNextEl(el);
 			}, 0);
@@ -44,8 +55,8 @@
 		review();
 	};
 
+	debugger;
 	makeNextEl(global.current);
 
-	debugger;
 
 })();

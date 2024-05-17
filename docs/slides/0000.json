@@ -1,4 +1,11 @@
-{
+[{
 	"view" : "Title",
-	"title" : "React и Ошибки"
-}
+	"title" : "про ошибки"
+},{
+	"view" : "Starter",
+	"title" : "..."
+},{
+	"view" : "Title",
+	"title" : "про ошибки",
+	"subtitle": "никогда не было и вот опять"
+}]
